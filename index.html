@@ -273,12 +273,14 @@
     <div id="Footer"></div>
 
     <script>
-      fetch("../HTML/Header.html")
+      const includeBase = window.location.pathname.includes("/HTML/") ? "./" : "./HTML/";
+
+      fetch(`${includeBase}Header.html`)
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("header-placeholder").innerHTML = data;
         });
-      fetch("../HTML/Footer.html")
+      fetch(`${includeBase}Footer.html`)
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("Footer").innerHTML = data;
