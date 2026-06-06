@@ -18,7 +18,7 @@
       <nav>
         <a class="header-link" data-page="home" href="../index.html">Home</a>
         <div class="dropdown">
-          <a class="header-link dropdown-toggle" data-page="about" href="../HTML/About.html">
+          <a class="header-link dropdown-toggle" data-page="about" href="../HTML/About.html" onclick="if (window.innerWidth <= 768) { event.preventDefault(); const open = this.parentElement.classList.toggle('open'); this.setAttribute('aria-expanded', open); }">
             Who We Are ▼
           </a>
 
@@ -29,7 +29,7 @@
         </div>
 
         <div class="dropdown">
-          <a class="header-link dropdown-toggle" data-page="chapter" href="../HTML/Pondicherry-Chapter.html">
+          <a class="header-link dropdown-toggle" data-page="chapter" href="../HTML/Pondicherry-Chapter.html" onclick="if (window.innerWidth <= 768) { event.preventDefault(); const open = this.parentElement.classList.toggle('open'); this.setAttribute('aria-expanded', open); }">
             Find a Chapter ▼
           </a>
 

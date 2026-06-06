@@ -257,12 +257,14 @@ nav a:hover {
   }
 
   .dropdown:hover .dropdown-menu,
-  .dropdown:focus-within .dropdown-menu {
+  .dropdown:focus-within .dropdown-menu,
+  .dropdown.open .dropdown-menu {
     max-height: 300px;
   }
 
   .dropdown:hover .dropdown-toggle::after,
-  .dropdown:focus-within .dropdown-toggle::after {
+  .dropdown:focus-within .dropdown-toggle::after,
+  .dropdown.open .dropdown-toggle::after {
     transform: rotate(180deg);
   }
 

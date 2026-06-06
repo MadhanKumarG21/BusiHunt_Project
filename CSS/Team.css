@@ -67,9 +67,6 @@ body {
   .page-title {
     padding: 24px 16px 12px;
   }
-  nav {
-    display: none;
-  }
   footer {
     flex-direction: column;
     gap: 4px;
