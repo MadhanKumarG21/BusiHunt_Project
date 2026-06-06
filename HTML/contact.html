@@ -109,11 +109,56 @@
 
     <script>
       const includeBase = window.location.pathname.includes("/HTML/") ? "./" : "./HTML/";
+      const isHtmlPage = window.location.pathname.includes("/HTML/");
+
+      function adjustHeaderPaths() {
+        const mapping = isHtmlPage
+          ? {
+              css: "../CSS/Header.css",
+              logo: "../Images/busihunt_logo.png",
+              home: "../index.html",
+              about: "About.html",
+              aboutDirector: "about-director.html",
+              chapter: "Pondicherry-Chapter.html",
+              chennai: "Chennai.html",
+              team: "Team.html",
+              course: "Course.html",
+              gallery: "Gallery.html",
+              contact: "contact.html",
+            }
+          : {
+              css: "./CSS/Header.css",
+              logo: "./Images/busihunt_logo.png",
+              home: "./index.html",
+              about: "./HTML/About.html",
+              aboutDirector: "./HTML/about-director.html",
+              chapter: "./HTML/Pondicherry-Chapter.html",
+              chennai: "./HTML/Chennai.html",
+              team: "./HTML/Team.html",
+              course: "./HTML/Course.html",
+              gallery: "./HTML/Gallery.html",
+              contact: "./HTML/contact.html",
+            };
+
+        const cssLink = document.getElementById("header-css");
+        if (cssLink) cssLink.href = mapping.css;
+
+        const logoImg = document.getElementById("header-logo");
+        if (logoImg) logoImg.src = mapping.logo;
+
+        document.querySelectorAll(".header-link").forEach((link) => {
+          const page = link.dataset.page;
+          if (page && mapping[page]) {
+            link.href = mapping[page];
+          }
+        });
+      }
 
       fetch(`${includeBase}Header.html`)
         .then((response) => response.text())
         .then((data) => {
           document.getElementById("header-placeholder").innerHTML = data;
+          adjustHeaderPaths();
         });
       fetch(`${includeBase}Footer.html`)
         .then((response) => response.text())
