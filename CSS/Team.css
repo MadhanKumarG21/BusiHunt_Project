@@ -1,0 +1,94 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  color: #333;
+}
+
+/* ===== PAGE TITLE ===== */
+.page-title {
+  padding: 40px 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.page-title h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: #c0392b;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* TEAM SECTION */
+.team-section {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px 60px;
+}
+
+/* GRID */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+
+/* CARD */
+.member-card {
+  padding-top: 30px;
+  width: 100%;
+  overflow: hidden;
+}
+
+/* IMAGE */
+.member-card img {
+  width: 100%;
+  display: block;
+  height: auto;
+}
+
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 600px) {
+  .team-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+  }
+  .team-section {
+    padding: 10px 16px 40px;
+  }
+  .page-title {
+    padding: 24px 16px 12px;
+  }
+  nav {
+    display: none;
+  }
+  footer {
+    flex-direction: column;
+    gap: 4px;
+    padding: 14px 20px;
+    text-align: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .team-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-title h1 {
+    font-size: 30px;
+  }
+
+  .member-card {
+    width: 100%;
+  }
+}
+

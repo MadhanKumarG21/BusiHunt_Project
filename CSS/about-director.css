@@ -1,0 +1,138 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  overflow-x: hidden;
+}
+.director-section{
+    padding:80px 0;
+    background:#fff;
+}
+
+.page-title{
+    color:#d7263d;
+    font-size:40px;
+    font-weight:700;
+    margin-bottom:30px;
+    padding-left: 200px;
+}
+
+.director-name{
+    color:#d7263d;
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:40px;
+     padding-left: 200px;
+}
+
+.director-image{
+    text-align:center;
+    margin-bottom:40px;
+}
+
+.director-image img{
+    width:100%;
+    max-width:750px;
+    height:auto;
+}
+
+.director-content{
+    max-width:1100px;
+    margin:auto;
+}
+
+.director-content p{
+    font-size:17px;
+  
+    color:#333;
+    margin-bottom:40px;
+}
+
+.director-content h2{
+    color:#d7263d;
+    font-size:24px;
+    font-weight:700;
+    margin-bottom:20px;
+    margin-top:40px;
+}
+
+.whatsapp-btn{
+    background:#d7263d;
+    color:#fff;
+    padding:18px 40px;
+    display:inline-block;
+    margin-top:20px;
+    font-weight:600;
+    transition:.3s;
+}
+
+.whatsapp-btn:hover{
+    background:#b71c1c;
+    color:#fff;
+}
+
+.network-banner{
+    background:#232b63;
+    padding:120px 20px;
+    text-align:center;
+}
+
+.network-banner h2{
+    color:#fff;
+    font-size:60px;
+    font-weight:300;
+    line-height:1.5;
+    letter-spacing:2px;
+}
+
+.text-center{
+    text-align: center;
+    text-decoration: none;
+}
+.text-center a{
+    text-decoration: none;
+}
+
+@media (max-width: 768px) {
+  .director-section {
+    padding: 40px 16px;
+  }
+
+  .page-title,
+  .director-name {
+    padding-left: 0;
+    text-align: center;
+    font-size: 32px;
+  }
+
+  .director-content {
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 0 10px;
+  }
+
+  .director-content p,
+  .director-content h2 {
+    font-size: 16px;
+  }
+
+  .whatsapp-btn {
+    width: 100%;
+    max-width: 320px;
+    padding: 16px 20px;
+    margin: 0 auto;
+  }
+
+  .network-banner {
+    padding: 60px 16px;
+  }
+
+  .network-banner h2 {
+    font-size: 32px;
+  }
+}

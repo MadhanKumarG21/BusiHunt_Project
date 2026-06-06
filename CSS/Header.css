@@ -1,0 +1,304 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  overflow-x: hidden;
+}
+
+/* HEADER */
+
+header {
+  height: 154px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 0 80px;
+  background: #fff;
+  border-bottom: 1px solid rgb(251, 247, 247);
+}
+
+.logo img {
+  width: 180px;
+}
+
+nav {
+  display: flex;
+  gap: 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #111;
+  font-size: 17px;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  color: #e5243b;
+}
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 220px;
+  background: #fff;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  border-radius: 8px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+
+  transition: all 0.3s ease;
+  z-index: 1000;
+}
+
+.dropdown-menu li {
+  border-bottom: 1px solid #eee;
+}
+
+.dropdown-menu li:last-child {
+  border-bottom: none;
+}
+
+.dropdown-menu li a {
+  display: block;
+  padding: 15px 20px;
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu li a:hover {
+  background: #f5f5f5;
+  color: #0056b3;
+}
+
+/* Show dropdown on hover */
+.dropdown:hover .dropdown-menu {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* =========================================================
+   MOBILE RESPONSIVE — CSS-only hamburger menu
+   
+   How it works (NO HTML or JS changes needed):
+   • The <nav> is always sized to cover the full viewport,
+     but clip-path clips it to a tiny 40×40 px zone that sits
+     right on top of the hamburger icon.
+   • On mobile, the first tap triggers :hover (which is
+     "sticky" on touch devices). That expands clip-path to
+     reveal the full menu.
+   • Tapping anywhere outside <nav> removes :hover → menu
+     closes with a smooth clip-path transition.
+   ========================================================= */
+
+@media (max-width: 768px) {
+
+  /* ---- HEADER BAR ---- */
+  header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 18px;
+    height: auto;
+    background: #fff;
+    border-bottom: 1px solid #efeff4;
+    position: relative;
+    z-index: 9999;
+  }
+
+  .logo {
+    z-index: 110;
+    position: relative;
+  }
+  .logo img {
+    width: 130px;
+  }
+
+  /* ---- HAMBURGER ICON (purely visual, sits behind the nav) ---- */
+  header::after {
+    content: "";
+    display: block;
+    width: 45px;
+    height: 42px;
+    position: fixed;
+
+    right: 16px;
+    transform: translateY(-50%);
+    z-index: 100;
+    pointer-events: none;          /* visual only — nav handles taps */
+    border-radius: 6px;
+    background-color: #e5243b;
+
+    /* Three horizontal white lines */
+    background-image:
+      linear-gradient(#fff 0 0),
+      linear-gradient(#fff 0 0),
+      linear-gradient(#fff 0 0);
+    background-repeat: no-repeat;
+    background-size: 20px 2px;
+    background-position:
+      center calc(50% - 6px),
+      center center,
+      center calc(50% + 6px);
+
+    transition: background-color 0.3s ease;
+  }
+
+  nav {
+    display: inline-block;
+    position: fixed;
+    top: 33px;
+    left: -7px;
+    width: 100%;
+    height: 100dvh;
+    padding-top: 80px;
+    background: #fff;
+    overflow-y: auto;
+    cursor: pointer;
+
+  
+    clip-path: inset(8px 10px calc(100% - 48px) calc(100% - 52px) round 6px);
+    transition: clip-path 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+                background-color 0.3s ease;
+  }
+
+  nav:hover,
+  nav:focus-within {
+    clip-path: inset(0 0 0 0);
+    cursor: default;
+  }
+
+  /* ---- Swap hamburger → X icon when menu is open ---- */
+  header:has(nav:hover)::after,
+  header:has(nav:focus-within)::after {
+    /* X shape via two diagonal gradient lines */
+    background-image:
+      linear-gradient(45deg, transparent 42%, #fff 42%, #fff 58%, transparent 58%),
+      linear-gradient(-45deg, transparent 42%, #fff 42%, #fff 58%, transparent 58%);
+    background-size: 22px 22px, 22px 22px;
+    background-position: center, center;
+    background-repeat: no-repeat;
+  }
+
+  /* ---- NAV LINKS ---- */
+  nav > a,
+  .dropdown > .dropdown-toggle {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 18px 20px;
+    color: #1a1a2e;
+    font-size: 16px;
+    font-weight: 500;
+    text-decoration: none;
+    background: #fff;
+    border-bottom: 1px solid #f0f0f0;
+    cursor: pointer;
+    transition: color 0.2s ease, background 0.2s ease;
+  }
+
+  /* "Home" link highlighted like in the reference image */
+  nav > a:first-child {
+    color: #e5243b;
+  }
+
+  nav > a:hover,
+  .dropdown > .dropdown-toggle:hover {
+    color: #e5243b;
+    background: #fdf2f3;
+  }
+
+  /* Remove bottom border on last items */
+  nav > a:last-of-type,
+  .dropdown:last-of-type > .dropdown-toggle {
+    border-bottom: none;
+  }
+
+  /* ---- DROPDOWN CHEVRON ---- */
+  .dropdown-toggle {
+    position: relative;
+  }
+  .dropdown-toggle::after {
+    content: "⌄";
+    font-size: 18px;
+    color: #999;
+    margin-left: auto;
+    padding-left: 12px;
+    transition: transform 0.3s ease;
+  }
+
+  /* ---- DROPDOWN SUB-MENU ---- */
+  .dropdown-menu {
+    position: static;
+    opacity: 1;
+    visibility: visible;
+    transform: none;
+    box-shadow: none;
+    border-radius: 0;
+    background: #fafafa;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.35s ease;
+  }
+
+  .dropdown:hover .dropdown-menu,
+  .dropdown:focus-within .dropdown-menu {
+    max-height: 300px;
+  }
+
+  .dropdown:hover .dropdown-toggle::after,
+  .dropdown:focus-within .dropdown-toggle::after {
+    transform: rotate(180deg);
+  }
+
+  .dropdown-menu li {
+    border-bottom: 1px solid #f0f0f0;
+  }
+
+  .dropdown-menu li:last-child {
+    border-bottom: none;
+  }
+
+  .dropdown-menu li a {
+    display: block;
+    padding: 14px 20px 14px 40px;
+    color: #555;
+    font-size: 15px;
+    text-decoration: none;
+    background: #fafafa;
+    transition: color 0.2s ease, background 0.2s ease;
+  }
+
+  .dropdown-menu li a:hover {
+    background: #fdf2f3;
+    color: #e5243b;
+  }
+
+  /* ---- BOTTOM GRADIENT FADE (matches reference image) ---- */
+  nav::after {
+    content: "";
+    display: block;
+    height: 40px;
+    background: linear-gradient(to bottom, transparent, rgba(220, 210, 230, 0.25));
+    pointer-events: none;
+  }
+}

@@ -1,0 +1,253 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+}
+
+/* HERO */
+
+.hero {
+  height: 430px;
+  background:
+    linear-gradient(rgba(231, 51, 76, 0.65), rgba(231, 51, 76, 0.75)),
+    url("./Images/contact-banner.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.overlay {
+  width: 1400px;
+  margin: auto;
+  height: 100%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.hero-content {
+  padding-bottom: 60px;
+}
+
+.hero h1 {
+  color: white;
+  font-size: 90px;
+  font-weight: 700;
+}
+
+/* CONTACT */
+
+.contact-section {
+  padding: 90px 0;
+}
+
+.contact-container {
+  width: 1100px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1fr 1.2fr 0.9fr;
+  gap: 40px;
+}
+
+.contact-info h2 {
+  color: #e7334c;
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.contact-info p {
+  line-height: 2;
+  margin-bottom: 30px;
+}
+
+.contact-info h3 {
+  color: #e7334c;
+  margin-bottom: 25px;
+}
+
+.info-item {
+  margin-bottom: 15px;
+  color: #e7334c;
+}
+
+.info-item i {
+  margin-right: 10px;
+}
+
+.social-icons {
+  margin-top: 40px;
+  display: flex;
+  gap: 15px;
+}
+
+.social-icons a {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: black;
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+/* FORM */
+
+.contact-form label {
+  display: block;
+  font-weight: 600;
+  margin-bottom: 10px;
+}
+
+.contact-form input,
+.contact-form textarea {
+  width: 100%;
+  border: 1px solid #ddd;
+  padding: 15px;
+  margin-bottom: 25px;
+}
+
+.contact-form textarea {
+  height: 220px;
+  resize: none;
+}
+
+.contact-form button {
+  background: #e7334c;
+  color: white;
+  border: none;
+  padding: 16px 50px;
+  cursor: pointer;
+}
+
+/* CARD */
+
+.experience-card {
+  border: 1px solid #e5e5e5;
+  padding: 50px;
+}
+
+.experience-card h2 {
+  color: #e7334c;
+  font-size: 40px;
+  font-weight: 700;
+  line-height: 1.2;
+  margin-bottom: 35px;
+}
+
+.experience-card p {
+  line-height: 2;
+  margin-bottom: 40px;
+}
+
+.whatsapp-btn {
+  background: #e7334c;
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+  display: inline-flex;
+  gap: 10px;
+  align-items: center;
+
+  padding: 18px 35px;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px) {
+  .contact-container {
+    width: 90%;
+    grid-template-columns: 1fr;
+  }
+
+
+
+
+  .hero h1 {
+    font-size: 60px;
+  }
+
+  .footer-banner h2 {
+    font-size: 40px;
+  }
+
+  footer {
+    padding: 20px;
+  }
+}
+
+@media (max-width: 768px) {
+  .hero {
+    height: 320px;
+  }
+
+  .overlay {
+    width: 100%;
+    padding: 0 16px;
+  }
+
+  .hero-content {
+    padding-bottom: 40px;
+  }
+
+  .hero h1 {
+    font-size: 42px;
+    line-height: 1.1;
+  }
+
+  .contact-container {
+    width: 95%;
+    gap: 30px;
+  }
+
+  .contact-info h2,
+  .experience-card h2 {
+    font-size: 32px;
+  }
+
+  .contact-info p,
+  .experience-card p,
+  .contact-form label,
+  .contact-form input,
+  .contact-form textarea,
+  .join-card p {
+    font-size: 16px;
+  }
+
+  .contact-form textarea {
+    height: 180px;
+  }
+
+  .contact-form button,
+  .whatsapp-btn {
+    width: 100%;
+    max-width: 100%;
+    padding: 16px;
+  }
+}
+
+@media (max-width: 540px) {
+  .hero h1 {
+    font-size: 32px;
+  }
+
+  .contact-info h2,
+  .experience-card h2 {
+    font-size: 28px;
+  }
+
+  .contact-info,
+  .contact-form,
+  .experience-card {
+    padding: 0;
+  }
+}
+

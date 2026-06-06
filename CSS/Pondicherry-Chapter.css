@@ -1,0 +1,238 @@
+body {
+  margin: 0;
+  background: #f7f5f5;
+  font-family: "Poppins", sans-serif;
+}
+.page-wrap {
+  width: 1180px;
+  margin: 0 auto;
+  padding: 25px 0 40px;
+}
+/* TITLES */
+.page-title {
+  font-size: 42px;
+  font-weight: 700;
+  color: #e4334d;
+  text-transform: uppercase;
+  margin: 0 0 20px;
+}
+.section-title {
+  font-size: 32px;
+  font-weight: 700;
+  color: #e4334d;
+  text-transform: uppercase;
+  margin: 35px 0 25px;
+}
+
+/* HERO */
+.hero-banner {
+  width: 1140px;
+  height: 570px;
+  display: flex;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-banner img {
+  object-fit: cover;
+}
+
+.hero-text {
+  width: 330px;
+  background: #d72638;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-text h2 {
+  color: #fff;
+  font-size: 54px;
+  line-height: 1.2;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin: 0;
+}
+
+/* DIRECTOR CARD */
+
+.row-single {
+  width: 660px;
+  margin: 0 auto 10px;
+}
+
+.row-single .member-card {
+  width: 660px;
+}
+
+.row-single img {
+  width: 100%;
+  display: block;
+}
+
+/* SUPPORT DIRECTOR */
+
+.row-single-md {
+  width: 660px;
+  margin: 0 auto 10px;
+}
+
+.row-single-md .member-card {
+  width: 660px;
+}
+
+.row-single-md img {
+  width: 100%;
+  display: block;
+}
+
+/* SECRETARY + PRESIDENT */
+
+.row-two {
+  width: 980px;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+
+  margin: 0 auto 15px;
+}
+
+.row-two img {
+  width: 100%;
+  display: block;
+}
+
+/* VICE PRESIDENT */
+
+.row-single-vp {
+  width: 660px;
+  margin: 0 auto 20px;
+}
+
+.row-single-vp img {
+  width: 100%;
+  display: block;
+}
+
+/* 3 COLUMN GRID */
+
+.row-three {
+  width: 980px;
+
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 8px;
+
+  margin-bottom: 8px;
+  margin-left: 100px;
+}
+
+.row-three img {
+  width: 100%;
+  display: block;
+}
+
+/* LAST CARD */
+
+.row-single-last {
+  width: 660px;
+  margin: 20px auto 0;
+}
+
+.row-single-last img {
+  width: 100%;
+  display: block;
+}
+
+/* CARD RESET */
+
+.member-card {
+  overflow: hidden;
+}
+
+.member-card img {
+  display: block;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1024px) {
+  .page-wrap {
+    width: 95%;
+  }
+
+  .hero-banner {
+    width: 100%;
+  }
+
+  .hero-banner img {
+    width: 65%;
+  }
+
+  .hero-text {
+    width: 35%;
+  }
+
+  .row-two,
+  .row-three {
+    width: 100%;
+  }
+
+  .row-single,
+  .row-single-md,
+  .row-single-vp,
+  .row-single-last {
+    width: 65%;
+  }
+}
+
+@media (max-width: 768px) {
+  .page-wrap {
+    width: 100%;
+    padding: 20px 16px 40px;
+  }
+
+  .hero-banner,
+  .row-single,
+  .row-single-md,
+  .row-single-vp,
+  .row-single-last {
+    width: 100%;
+    margin: 0 auto 15px;
+  }
+
+  .hero-banner img,
+  .row-two img,
+  .row-three img {
+    width: 100%;
+    height: auto;
+  }
+
+  .row-two,
+  .row-three {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .row-three {
+    margin-left: 0;
+  }
+}
+
+@media (max-width: 540px) {
+  .page-title,
+  .section-title {
+    font-size: 32px;
+  }
+
+  .hero-banner {
+    height: auto;
+  }
+}
+

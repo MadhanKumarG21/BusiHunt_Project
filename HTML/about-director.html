@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="../CSS/about-director.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+    <section class="director-section">
+      <div class="container">
+        <h1 class="page-title">ABOUT DIRECTOR</h1>
+
+        <h3 class="director-name">S. V. Anand Director & Chairman BusiHunt</h3>
+
+        <div class="director-image">
+          <img
+            src="https://busihunt.com/wp-content/uploads/2024/04/SV-ANAND-DIRECTOR-1-1024x1024.png"
+            alt="S V Anand"
+          />
+        </div>
+
+        <div class="director-content">
+          <p>
+            With a solid foundation in Computer Science, having attained an MSc
+            from Pondicherry University, I bring over 18 years of extensive
+            experience across multiple industries, including media, tourism,
+            interior design, and construction.
+          </p>
+
+          <h2>Entrepreneurial Leadership</h2>
+
+          <p>
+            In my capacity as the Director and Chairman of Busihunt, I spearhead
+            an innovative initiative aimed at fostering collaboration and
+            networking on a global scale.
+          </p>
+
+          <h2>Strategic Vision:</h2>
+
+          <p>
+            At Busihunt, we are committed to cultivating robust communities of
+            entrepreneurs and industry leaders, leveraging the power of
+            connectivity and collective knowledge.
+          </p>
+
+          <h2>Commitment to Excellence:</h2>
+
+          <p>
+            Driven by a passion for innovation and excellence, Busihunt is
+            dedicated to redefining the landscape of business forums.
+          </p>
+
+          <h2>Join Us:</h2>
+
+          <p>
+            I invite you to join me on this transformative journey as we embark
+            on a mission to empower entrepreneurs, foster collaboration, and
+            shape the future of business globally.
+          </p>
+        </div>
+
+        <div class="text-center">
+          <a href="#" class="whatsapp-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+            WHATSAPP US NOW
+          </a>
+        </div>
+      </div>
+    </section>
+    <div id="Footer"></div>
+  </body>
+  <script>
+    fetch("../HTML/Header.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("header-placeholder").innerHTML = data;
+      });
+    fetch("../HTML/Footer.html")
+      .then((response) => response.text())
+      .then((data) => {
+        document.getElementById("Footer").innerHTML = data;
+      });
+  </script>
+</html>

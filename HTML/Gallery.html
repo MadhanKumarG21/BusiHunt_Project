@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Gallery – BusiHunt</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/Gallery.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Women's Day -->
+      <div class="gallery-section">
+        <h2>Women's Day Celebration</h2>
+        <div class="photo-wrap">
+          <img
+            src="https://busihunt.com/wp-content/uploads/2024/04/Womens-Day-Celebration-at-Busihunt-Pondicherry-1024x682.jpeg"
+            alt="Women's Day Celebration at BusiHunt Pondicherry"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- Diwali -->
+      <div class="gallery-section">
+        <h2>Diwali Celebration</h2>
+        <div class="photo-wrap">
+          <img
+            src="https://busihunt.com/wp-content/uploads/2024/04/DIWALI-CELEBRATIONS-AT-BUSIHUNT-PONDICHERRY-1024x682.jpeg"
+            alt="Diwali Celebrations at BusiHunt Pondicherry"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- New Year -->
+      <div class="gallery-section">
+        <h2>New Year Celebration</h2>
+        <div class="photo-wrap">
+          <img
+            src="https://busihunt.com/wp-content/uploads/2024/04/NEW-YEAR-CELEBRATION.jpeg"
+            alt="New Year Celebration at BusiHunt"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </main>
+
+    <!-- Footer Banner -->
+    <div id="Footer"></div>
+
+    <script>
+      fetch("../HTML/Header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+      fetch("../HTML/Footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("Footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

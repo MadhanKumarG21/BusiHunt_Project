@@ -1,0 +1,254 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: #fff;
+  overflow-x: hidden;
+}
+.hero {
+  height: 420px;
+  background: url("images/how-to-join.jpg") center/cover;
+  position: relative;
+}
+
+.overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(rgba(215, 35, 55, 0.55), rgba(215, 35, 55, 0.75));
+  display: flex;
+  align-items: flex-end;
+}
+.join-subtitle {
+  letter-spacing: 2px;
+  font-size: 40px;
+  font-weight: 700;
+  color: #e5243b;
+  margin: 0 0 60px 120px;
+}
+.join-section h2 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #e5243b;
+  text-align: left;
+  margin-top: -40px;
+
+  padding: 0 0 20px 290px;
+  margin-bottom: 30px;
+}
+.join-section {
+  text-align: center;
+}
+.join-section svg {
+  width: 80px;
+  height: 80px;
+}
+.section-title {
+  color: #e5243b;
+  font-size: 42px;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+
+.join-row {
+  display: flex;
+  justify-content: center;
+  gap: 250px;
+}
+
+.join-card {
+  text-align: center;
+}
+
+.join-card i {
+  color: #001a72;
+  font-size: 40px;
+  margin-bottom: 20px;
+}
+
+.join-card p,
+.join-middle p {
+  font-size: 24px;
+  color: #e5243b;
+  font-weight: 600;
+}
+
+.join-middle {
+  margin-top: 60px;
+}
+
+.join-middle i {
+  color: #e5243b;
+  font-size: 42px;
+}
+
+.join-middle p {
+  color: #001a72;
+  font-weight: 700;
+  margin-top: 15px;
+}
+.join-us button {
+  background-color: #d9534f;
+  color: white;
+  border: none;
+  padding: 15px 50px;
+  font-size: 15px;
+
+  margin-top: 20px;
+}
+.join-us{
+  margin-bottom:20px ;
+}
+/* NETWORK IMAGE */
+
+.network-section {
+  margin-top: 50px;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.network-section img {
+  width: 70%;
+}
+
+.overlay h1 {
+  color: white;
+  font-size: 72px;
+  font-weight: 800;
+  margin: 0 0 60px 120px;
+}
+
+.join-process {
+  max-width: 1100px;
+  margin: auto;
+  text-align: center;
+  padding: 40px 20px;
+}
+
+.network-banner {
+  background: #232c68;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  margin-top: 50px;
+}
+
+.network-banner h2 {
+  font-size: 24px;
+  font-weight: 300;
+}
+
+@media (max-width: 1024px) {
+  .hero {
+    height: 360px;
+  }
+
+  .overlay h1 {
+    margin: 0 0 40px 40px;
+    font-size: 56px;
+  }
+
+  .join-subtitle {
+    margin: 0 0 60px 40px;
+  }
+
+  .join-section h2 {
+    padding: 0 20px 20px 40px;
+  }
+
+  .join-row {
+    gap: 120px;
+  }
+}
+
+@media (max-width: 768px) {
+  .overlay {
+    min-height: 280px;
+  }
+
+  .overlay h1 {
+    font-size: 42px;
+    margin: 0 0 30px 20px;
+  }
+
+  .join-subtitle {
+    margin: 0 0 40px 20px;
+    font-size: 28px;
+  }
+
+  .join-section h2 {
+    padding: 0 20px;
+    text-align: center;
+    margin-bottom: 30px;
+  }
+
+  .join-row {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 0 20px;
+  }
+
+  .join-card {
+    width: 100%;
+  }
+
+  .join-card i {
+    font-size: 36px;
+  }
+.join-image{
+  width: 300px;
+  height: 200px;
+}
+  .join-card p,
+  .join-middle p {
+    font-size: 20px;
+  }
+
+  .join-middle {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  .join-us {
+    padding: 0 20px;
+  }
+
+  .join-us button {
+    width: 100%;
+    max-width: 100%;
+    padding: 15px 24px;
+    font-size: 16px;
+  }
+
+  .join-section {
+    text-align: center;
+  }
+
+  .network-section img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-width: 540px) {
+  .overlay h1 {
+    font-size: 32px;
+    margin: 0 0 26px 16px;
+  }
+
+  .join-subtitle {
+    font-size: 24px;
+    margin: 0 0 32px 16px;
+  }
+
+  .join-card p,
+  .join-middle p {
+    font-size: 18px;
+  }
+}
+

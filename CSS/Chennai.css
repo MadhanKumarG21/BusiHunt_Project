@@ -1,0 +1,67 @@
+/* PAGE */
+body {
+  margin: 0;
+  background: #f7f5f5;
+  font-family: "Poppins", sans-serif;
+}
+
+/* CHENNAI SECTION */
+.chennai-chap {
+  width: 1105px;
+  height: 240px;
+
+  margin: 95px auto 85px;
+
+  background: #ffffff;
+  border: 1px solid #f3f3f3;
+
+  display: flex;
+  align-items: center;
+}
+
+/* TEXT WRAPPER */
+.chennai-chap > div {
+  padding-left: 110px;
+}
+
+/* TITLE */
+.chennai-chap h1 {
+  margin: 0;
+
+  font-size: 34px;
+  font-weight: 300;
+  line-height: 1.2;
+
+  color: #ea2d5a;
+
+  letter-spacing: 0;
+}
+
+@media (max-width: 768px) {
+  .chennai-chap {
+    width: 100%;
+    margin: 40px auto;
+    padding: 24px 16px;
+    height: auto;
+  }
+
+  .chennai-chap > div {
+    padding-left: 0;
+    text-align: center;
+  }
+
+  .chennai-chap h1 {
+    font-size: 28px;
+  }
+}
+
+@media (max-width: 480px) {
+  .chennai-chap {
+    padding: 20px 12px;
+  }
+
+  .chennai-chap h1 {
+    font-size: 24px;
+  }
+}
+

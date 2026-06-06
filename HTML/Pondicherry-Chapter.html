@@ -1,0 +1,162 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Pondicherry Chapter – BusiHunt</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="../CSS/Pondicherry-Chapter.css" />
+  </head>
+  <body>
+    <!-- Header -->
+    <div id="header-placeholder"></div>
+
+    <!-- Page -->
+    <div class="page-wrap">
+      <!-- Page title -->
+      <h1 class="page-title">Pondicherry Chapter</h1>
+
+      <!-- Hero Banner -->
+      <div class="hero-banner">
+        <img
+          src="https://busihunt.com/wp-content/uploads/2024/04/BUSIHUNT-PONDICHERRY.png"
+          alt="Pondicherry aerial view"
+        />
+      </div>
+
+      <!-- Section heading -->
+      <h2 class="section-title">Meet Our Aura Chapter Members</h2>
+
+      <!-- Row 1 — Director (large single) -->
+      <div class="row-single">
+        <div class="member-card">
+          <img
+            src="https://busihunt.com/wp-content/uploads/2024/04/SV-ANAND-DIRECTOR-1-768x768.png"
+            alt="S V Anand – Director"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- Row 2 — Support Director (large single) -->
+      <div class="row-single-md">
+        <div class="member-card">
+          <img
+            src="https://busihunt.com/wp-content/uploads/2024/04/MURUGAN-SUPPORT-DIRECTOR-BUSIHUNT-768x768.png"
+            alt="Mr. Murugan – Support Director"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- Row 3 — 2 column (Secretary Treasurer + President) -->
+      <div class="row-two">
+        <div class="member-card">
+          <img
+            src="https://busihunt.com/wp-content/uploads/2024/04/Mrs.-Parvin-Begum-Secretory-Treasurer-TQ-Fly-travels-1-1024x1024.png"
+            alt="Mrs. Parvin Begum"
+            loading="lazy"
+          />
+        </div>
+        <div class="member-card">
+          <img
+            src="https://busihunt.com/wp-content/uploads/2024/04/Mr.-Vairamani-President-Vairam-Fitness-Centre--1024x1024.png"
+            alt="Mr. Vairamani"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- Row 4 — Vice President (large single) -->
+      <div class="row-single-vp">
+        <div class="member-card">
+          <img
+            src="https://busihunt.com/wp-content/uploads/2024/04/Mr.-Thanigaivelan-Shanmugam-digital-marketing-Advanzo-Digital-Solutions-2-768x768.png"
+            alt="Mr. Thanigaivelan Shanmugam"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- Row 5 — 3 column (SathishKumar, Devaraj, Sakkarai) -->
+      <div class="row-three">
+        <div class="member-card">
+          <img
+            src="https://busihunt.com/wp-content/uploads/2024/04/SATHISHKUMAR-LGH-COORDINATOR-1-1024x1024.png"
+            alt="Mr. SathishKumar"
+            loading="lazy"
+          />
+        </div>
+        <div class="member-card">
+          <img
+            src="https://busihunt.com/wp-content/uploads/2024/04/DEVARAJ-MENTOR-COORDINATOR-1-1024x1024.png"
+            alt="Mr. Devaraj"
+            loading="lazy"
+          />
+        </div>
+        <div class="member-card">
+          <img
+            src="https://busihunt.com/wp-content/uploads/2024/04/SAKARAI-GROWTH-COORDINATOR-1024x1024.png"
+            alt="Mr. Sakkarai"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- Row 6 — 3 column (Madhurai, Arun Kumar, Babu) -->
+      <div class="row-three">
+        <div class="member-card">
+          <img
+            src="https://busihunt.com/wp-content/uploads/2024/04/Mr.-Madhurai-ATTENDANCE-COORDINATOR-1024x1024.png"
+            alt="Mr. Madhurai"
+            loading="lazy"
+          />
+        </div>
+        <div class="member-card">
+          <img
+            src="https://busihunt.com/wp-content/uploads/2024/04/Mr.Arunkumar-Referral-COORDINATOR-1024x1024.png"
+            alt="Mr. Arun Kumar"
+            loading="lazy"
+          />
+        </div>
+        <div class="member-card">
+          <img
+            src="https://busihunt.com/wp-content/uploads/2024/04/MR.BABU-M2M-COORDINATOR-1024x1024.png"
+            alt="Mr. Babu"
+            loading="lazy"
+          />
+        </div>
+      </div>
+
+      <!-- Row 7 — Attire Coordinator (large single) -->
+      <div class="row-single-last">
+        <div class="member-card">
+          <img
+            src="https://busihunt.com/wp-content/uploads/2024/04/Mr.-Duraikannu-ATTIRE-COORDINATOR-768x768.png"
+            alt="Mr. Duraikannu"
+            loading="lazy"
+          />
+        </div>
+      </div>
+    </div>
+    <!-- end page-wrap -->
+
+    <div id="Footer"></div>
+
+    <script>
+      fetch("../HTML/Header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+      fetch("../HTML/Footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("Footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>

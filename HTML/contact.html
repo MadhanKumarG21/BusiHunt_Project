@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us - BusiHunt</title>
+
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+
+    <link rel="stylesheet" href="../CSS/contact.css" />
+  </head>
+  <body>
+    <div id="header-placeholder"></div>
+
+    <section class="hero">
+      <div class="overlay">
+        <div class="hero-content">
+          <h1>Contact Us</h1>
+        </div>
+      </div>
+    </section>
+
+    <section class="contact-section">
+      <div class="contact-container">
+        <!-- LEFT -->
+
+        <div class="contact-info">
+          <h2>Get In Touch</h2>
+
+          <p>
+            Join BUSIHUNT & Take Your Business & Professional Growth to the Next
+            Level
+          </p>
+
+          <h3>Our Location</h3>
+
+          <p>
+            No. 513, Kamaraj salai,<br />
+            Axis Bank upstairs,<br />
+            2nd floor,<br />
+            Saram,<br />
+            Puducherry - 605013
+          </p>
+
+          <div class="info-item">
+            <i class="fa-solid fa-phone"></i>
+            <span>Phone: +91 9500900595</span>
+          </div>
+
+          <div class="info-item">
+            <i class="fa-regular fa-envelope"></i>
+            <span>Email: info@busihunt.com</span>
+          </div>
+
+          <div class="social-icons">
+            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#"><i class="fa-brands fa-x-twitter"></i></a>
+            <a href="#"><i class="fa-brands fa-google"></i></a>
+          </div>
+        </div>
+
+        <!-- FORM -->
+
+        <div class="contact-form">
+          <form>
+            <label>Your Name *</label>
+            <input type="text" />
+
+            <label>Your Email *</label>
+            <input type="email" />
+
+            <label>Subject</label>
+            <input type="text" />
+
+            <label>Your Message</label>
+            <textarea></textarea>
+
+            <button type="submit">Send</button>
+          </form>
+        </div>
+
+        <!-- RIGHT CARD -->
+
+        <div class="experience-card">
+          <h2>Want to Experience Busihunt?</h2>
+
+          <p>
+            Attend Busihunt Weekly Business Meeting and Experience How Busihunt
+            Community Works in Live
+          </p>
+
+          <a href="#" class="whatsapp-btn">
+            <i class="fa-brands fa-whatsapp"></i>
+            Whatsapp Us Now
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <div id="Footer"></div>
+
+    <script>
+      fetch("../HTML/Header.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("header-placeholder").innerHTML = data;
+        });
+      fetch("../HTML/Footer.html")
+        .then((response) => response.text())
+        .then((data) => {
+          document.getElementById("Footer").innerHTML = data;
+        });
+    </script>
+  </body>
+</html>
